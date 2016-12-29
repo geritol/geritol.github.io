@@ -1,28 +1,40 @@
-// logged in user's view
+function toggle(){
+  main.toggle()
+  noteboard.toggle()
+}
+
+function checkUser(){
+  user = localStorage.getItem('token')
+  if(user) toggle()
+}
+
+
+
 var main = new Vue({
   el: '#main',
   data: {
     message: 'helloss',
     show: true
+  },
+  methods: {
+    toggle: function (self) {
+      this.show = !this.show
+    }
   }
 })
 
-const NotFound = { template: '<p>Page not found</p>' }
-const Home = { template: '<p>home page</p>' }
-const About = { template: '<p>about page</p>' }
-const routes = {
-  '/': Home,
-  '/about': About
-}
-new Vue({
-  el: '#app',
+// logged in user's view
+var noteboard = new Vue({
+  el: '#noteboard',
   data: {
-    currentRoute: window.location.pathname
+    message: 'hello user!!',
+    show: false
   },
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute] || NotFound
+  methods: {
+    toggle: function (self) {
+      this.show = !this.show
     }
-  },
-  render (h) { return h(this.ViewComponent) }
+  }
 })
+
+checkUser()

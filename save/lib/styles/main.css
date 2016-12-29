@@ -1,0 +1,60 @@
+html, body, .main{
+  height: 100%;
+  margin: 0px
+}
+
+.main{
+  display: flex;
+  flex: 1 100%;
+}
+
+.content-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.single{
+  flex: 1
+}
+
+.auth > input{
+  height: 28px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  border: 1px solid #ccc;
+
+  margin-bottom: 5px
+}
+
+.auth > button {
+  height: 36px;
+  margin-top: 7px;
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+}
+
+#side-menu{
+  flex: 2;
+  height: 100%;
+  border-right: 1px solid #757575
+}
+
+#content{
+  flex: 8
+}

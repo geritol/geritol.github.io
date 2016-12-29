@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script src="lib/vue.js"/></script>
+      <script src="app/components.js"/></script>
+      <link rel="stylesheet" href="lib/styles/main.css"/>
     </head>
     <body>
 
+
       <div id="main" v-if="show">
-        {{message}}
+        Hello, please <a href='login'>login</a>
       </div>
 
-      <script src="lib/vue.js"></script>
-      <script src="app.js"></script>
-      <script src="app/templates.js"></script>
-      <script src="app/components.js"></script>
+      <div id="noteboard" class="main" v-if="show">
+        <side-menu id="side-menu"></side-menu>
+        <div id="content">
+          {{message}}
+        </div>
+
+      </div>
+
+    <script src="app/templates.js"></script>
     </body>
 </html>

@@ -7,3 +7,7 @@ Vue.component('rooter', {
     }
   }
 })
+
+Vue.component('side-menu',{
+  template: '<div>Side menu</div>'
+})

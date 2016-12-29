@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="../lib/vue.js"/></script>
+      <script src="../app/components.js"/></script>
+      <link rel="stylesheet" href="../lib/styles/main.css">
+    </head>
+    <body>
+      <div class="main content-center ">
+
+      <div id="login" class="column auth" style="width: 250px">
+        <input id="username" class="single" type="text" placeholder="Username">
+        <input id="password" class="single" type="password" placeholder="Password">
+        <button class="single" v-on:click="login">Login!</button>
+      </div>
+
+    </div>
+
+      <script src="login.js"></script>
+    </body>
+</html>
