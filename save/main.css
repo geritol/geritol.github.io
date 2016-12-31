@@ -1,4 +1,4 @@
-html, body, .main{
+html, body, #root, .main{
   height: 100%;
   margin: 0px
 }
@@ -52,12 +52,41 @@ html, body, .main{
   height: 36px;
 }
 
+.post{
+  margin-bottom: 10px
+}
+
+.post > .link {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 21.6px;
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.post > .link:hover {
+  text-decoration: underline;
+}
+
+.post > .helpers > span{
+  cursor: pointer;
+}
+
+.post > .helpers > span:hover{
+  text-decoration: underline;
+}
+
 #side-menu{
   flex: 2;
-  height: 100%;
-  border-right: 1px solid #757575
+  padding: 10px;
+  max-height: 100%;
+  border-right: 1px solid #757575;
+
 }
 
 #content{
-  flex: 8
+  flex: 10;
+  padding: 10px;
+  max-height: 100%;
+  overflow-x: scroll;
 }
