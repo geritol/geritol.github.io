@@ -63,10 +63,15 @@ html, body, #root, .main{
   margin-bottom: 10px
 }
 
-.post > .link {
-  font-size: 18px;
+.link{
+  font-size: 17px;
+  margin-bottom: 5px;
   font-weight: normal;
   line-height: 21.6px;
+}
+
+.post > .link {
+  font-size: 18px;
   color: #1a0dab;
   text-decoration: none;
 }
@@ -75,11 +80,11 @@ html, body, #root, .main{
   text-decoration: underline;
 }
 
-.post > .helpers > span{
+.helpers > span{
   cursor: pointer;
 }
 
-.post > .helpers > span:hover{
+.helpers > span:hover{
   text-decoration: underline;
 }
 
