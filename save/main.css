@@ -34,8 +34,7 @@ html, body, .main{
   margin-bottom: 5px
 }
 
-.auth > button {
-  height: 36px;
+.btn{
   margin-top: 7px;
   color: #fff;
   background-color: #286090;
@@ -47,6 +46,10 @@ html, body, .main{
   font-weight: 400;
   line-height: 1.42857143;
   text-align: center;
+}
+
+.auth > button {
+  height: 36px;
 }
 
 #side-menu{
