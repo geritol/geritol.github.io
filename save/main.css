@@ -3,6 +3,13 @@ html, body, #root, .main{
   margin: 0px
 }
 
+/* container for the logged out users*/
+#main{
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
 .main{
   display: flex;
   flex: 1 100%;
@@ -11,7 +18,7 @@ html, body, #root, .main{
 .content-center{
   display: flex;
   align-items: center;
-  justify-content: center;
+
 }
 
 .column{
@@ -77,16 +84,20 @@ html, body, #root, .main{
 }
 
 #side-menu{
+  display: flex;
+  flex-direction: column;
   flex: 2;
   padding: 10px;
   max-height: 100%;
   border-right: 1px solid #757575;
+  align-items: center;
+
 
 }
 
 #content{
   flex: 10;
-  padding: 10px;
+  padding: 20px;
   max-height: 100%;
   overflow-x: scroll;
 }
