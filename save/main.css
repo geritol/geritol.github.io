@@ -59,6 +59,71 @@ html, body, #root, .main{
   height: 36px;
 }
 
+.errors {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  border-width: 1px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42857143;
+  text-align: center;
+}
+
+/* the current choosen category */
+#choosen{
+  border-bottom: 1px solid #757575;
+}
+
+#choosen > .inline{
+  display: flex;
+  flex-direction: row;
+
+
+}
+#choosen > .inline > button{
+  display: flex !important;
+  flex-grow: 1;
+}
+
+#choosen > .inline > button > div{
+  margin: 0 auto;
+}
+
+#choosen > .inline > button > div > span{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+    font-size: 13px !important
+}
+
+#choosen > .title{
+  color: #009688;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+#choosen > input {
+  color: #4DB6AC !important;
+  border: 0;
+}
+
+
+#choosen > input:focus{
+  outline: none;
+}
+
+.category{
+  cursor: pointer
+}
+
+
 .post{
   margin-bottom: 10px
 }
@@ -80,6 +145,15 @@ html, body, #root, .main{
   text-decoration: underline;
 }
 
+.helpers{
+    display: flex;
+    flex-direction: row
+}
+
+.helpers > .tags{
+  margin-left: 2px;
+}
+
 .helpers > span{
   cursor: pointer;
 }
@@ -92,17 +166,79 @@ html, body, #root, .main{
   display: flex;
   flex-direction: column;
   flex: 2;
-  padding: 10px;
   max-height: 100%;
   border-right: 1px solid #757575;
-  align-items: center;
+}
 
-
+#categories{
+  overflow-y: auto;
 }
 
 #content{
   flex: 10;
   padding: 20px;
   max-height: 100%;
-  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+.react-tagsinput{
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
+.react-tagsinput-disabled{
+  padding-left: 5.6px;
+  padding-right: 5.6px;
+}
+
+/*.react-tagsinput {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-top: 5px;
+}*/
+
+/*.react-tagsinput--focused {
+  border-color: #a5d24a;
+}*/
+
+.react-tagsinput-tag {
+  background-color: #cde69c;
+  border-radius: 2px;
+  border: 1px solid #a5d24a;
+  color: #638421;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin-right: 5px;
+  padding: 2px;
+}
+
+.react-tagsinput-disabled > span > .react-tagsinput-tag{
+  padding-left: 7.6px;
+  padding-right: 7.6px;
+}
+
+.react-tagsinput-remove {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.react-tagsinput-tag a::before {
+  content: " ×";
+}
+
+.react-tagsinput-input {
+  background: transparent;
+  border: 0;
+  color: #777;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 1px;
+  outline: none;
+  padding: 5px;
+  width: 80px;
 }
