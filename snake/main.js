@@ -85,7 +85,8 @@ function Snake(){
       next.push(this.body[i])
     }
     this.body = next
-    return next
+    if(this.isDead()) this.reset()
+    return this.body
   }
 
   this.doesEat = function(point){
@@ -94,6 +95,19 @@ function Snake(){
 
   this.grow = function(point){
     this.body.push(point)
+  }
+
+  this.isDead = function(){
+    for(i=1, l=this.body.length; i<l; i++){
+      if(this.doesEat(this.body[i])) return true
+    }
+    return false
+  }
+
+  this.reset = function(){
+    this.body = [[1,1]]
+    this.dx = 1
+    this.dy = 0
   }
 
   this.move = function(direction){
