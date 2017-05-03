@@ -49,7 +49,7 @@ function Board(snake){
   this.draw = function(){
     this.clear()
 
-    const next = this.snake.next()
+    const next = this.snake.next(this)
     if(this.snake.doesEat(this.point)){
       this.snake.grow(this.point)
       this.newPoint()
@@ -68,8 +68,19 @@ function Snake(){
   this.dx = 1
   this.dy = 0
 
-  this.next = function(){
-    var next = [[this.body[0][0] + this.dx, this.body[0][1] + this.dy]]
+  this.headNextPosition = function(board){
+    let x = this.body[0][0] + this.dx
+    let y = this.body[0][1] + this.dy
+    if(x < 0) x = board.width
+    if(x > board.width) x = 0
+    if(y < 0) y = board.height
+    if(y > board.height) y = 0
+    return [x,y]
+  }
+
+  this.next = function(board){
+    const headNext = this.headNextPosition(board)
+    var next = [headNext]
     for(i=0, l=this.body.length-1; i<l; i++){
       next.push(this.body[i])
     }
