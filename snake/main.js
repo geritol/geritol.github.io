@@ -99,18 +99,22 @@ function Snake(){
   this.move = function(direction){
     switch(direction){
       case 'right':
+        if(this.dx === -1) break
         this.dx = 1
         this.dy = 0
         break
       case 'left':
+        if(this.dx === 1) break
         this.dx = -1
         this.dy = 0
         break
       case 'up':
+        if(this.dy === 1) break
         this.dx = 0
         this.dy = -1
         break
       case 'down':
+        if(this.dy === -1) break
         this.dx = 0
         this.dy = 1
         break
