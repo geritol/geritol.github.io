@@ -118,7 +118,7 @@ html, body, #root, .main{
 }
 
 .starred {
-  color: #FBC02D !important;
+  color: rgb(229, 115, 115) !important;
 }
 
 .archived{
