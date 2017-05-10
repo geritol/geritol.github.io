@@ -136,8 +136,8 @@ html, body, #root, .main{
 
 .post-title{
   text-decoration: none;
-  color: black
-
+  color: black;
+  word-wrap: break-word;
 }
 
 a:hover{
