@@ -6,14 +6,13 @@ const context = canvas.getContext('2d');
 const SIZE = 15;
 const SPEED = 80;
 
-var snake = new Snake();
-var board = new Board(snake);
+let snake = new Snake();
+let board = new Board(snake);
 
 board.newPoint();
 setInterval(function(){board.draw()}, SPEED);
 
 function Board(snake){
-
   this.snake = snake;
   this.height = Math.floor(canvas.height / SIZE);
   this.width = Math.floor(canvas.width / SIZE);
@@ -34,7 +33,7 @@ function Board(snake){
         this.snake.move('down');
         break;
     }
-  })
+  }.bind(this))
 
   this.newPoint = function(){
     let x = Math.floor(Math.random()*this.width);
