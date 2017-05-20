@@ -196,8 +196,31 @@ a:hover{
 
 #content{
   flex: 10;
-  padding: 20px;
   overflow-y: auto;
+}
+
+.content{
+  padding: 20px;
+}
+
+.search{
+  z-index: 10;
+  padding: 10px;
+  width: 200px;
+  background-color: #FFFFFF;
+  position: absolute;
+  right: 10px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px;
+  border:1px solid #CCCCCC;
+  border-top-width: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.search > input{
+  width: 84%;
 }
 
 .react-tagsinput{
