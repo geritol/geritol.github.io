@@ -39,10 +39,6 @@
 	margin-top: 15px;
 }
 
-.header-outer .more > div {
-	padding: 0;
-}
-
 .more-btn{
 	cursor: pointer;
 	margin-bottom: 10px;
@@ -64,8 +60,10 @@ h2 {
 }
 
 .tag{
+	display: inline-block;
 	background-color: rgb(251, 251, 123);
-	padding: 5px;
+	padding: 0 5px 0 5px;
+	margin-bottom: 3px
 }
 
 .project{
