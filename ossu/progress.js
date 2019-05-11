@@ -124,7 +124,7 @@ var progress = [
 					{
 						name: 'Algorithms: Design and Analysis, Part II',
 						url: 'https://lagunita.stanford.edu/courses/course-v1:Engineering+Algorithms2+SelfPaced/about',
-						status: 'todo'
+						status: 'doing'
 					}
 				]
 			},
