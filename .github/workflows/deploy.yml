@@ -32,6 +32,10 @@ jobs:
           cd ..
           mkdir blog2
           cp -R blog/build/* blog2
+          rm -rf blog
+          mkdir blog
+          cp -R blog2/* blog
+          rm -rf blog2
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
