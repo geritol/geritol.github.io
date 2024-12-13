@@ -8,8 +8,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    needs: jekyll-build
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
     steps:
+       - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -25,11 +35,11 @@ jobs:
           npm run build
           cd ..
           mkdir -p deploy
-          cp -R static-files/* deploy/
+          cp -R ./* deploy/
           cp -R blog/build/* deploy/blog/
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+      - name: Deploy artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
