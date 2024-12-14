@@ -3,4 +3,8 @@
 	let props = $props();
 </script>
 
+<svelte:head>
+	<title>Geri's Notes - {props.title}</title>
+</svelte:head>
+
 <BlogPost {...props} />
