@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Bio from './Bio.svelte';
-	let props = $props();
+	import type { Snippet } from 'svelte';
+	let props: { title: string; date: string; children: Snippet<[]> | undefined } = $props();
 </script>
 
 <article class="blog-post" itemScope itemType="http://schema.org/Article">
