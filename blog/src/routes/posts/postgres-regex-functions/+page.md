@@ -21,7 +21,7 @@ SET
   video_embed = substring(
     video_embed
     from
-      '\/embed\/([^"]*)'
+      '\\/embed\\/([^"]*)'
   );
 
 ```
@@ -40,7 +40,7 @@ UPDATE
   users
 SET
   password = regexp_replace(
-    password, '(^\$2y\$)(.*)', '$2b$\2'
+    password, '(^\\$2y\\$)(.*)', '$2b$\\2'
   )
 
 ```
@@ -64,7 +64,7 @@ FROM
   (
     SELECT
       id,
-      regexp_match(name, '([^\s]+)(\s(.*))?')
+      regexp_match(name, '([^\\s]+)(\\s(.*))?')
     FROM
       users
   ) AS split_name
